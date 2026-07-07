@@ -1,2 +1,3 @@
-# ALC_SPIG2026
-Segundo Parcial Informática General | Cátedra Drelichman
+Ángel León Cabral
+Segundo Parcial - Informática General
+Artes Multimediales - UNA
