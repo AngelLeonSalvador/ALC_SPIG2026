@@ -1,3 +1,4 @@
+/* CREO UNA LISTA CON TODOS LOS DATOS */
 const datosCuriosos = [
   "Laurie Anderson fue una de las primeras artistas en combinar performance, música experimental y tecnología en la escena del arte contemporáneo.",
   "Su tema O Superman se convirtió en un éxito inesperado en 1981 y llegó al segundo puesto en los rankings del Reino Unido.",
@@ -11,26 +12,113 @@ const datosCuriosos = [
   "Sigue siendo una figura activa e influyente en el arte digital y ha experimentado con inteligencia artificial en proyectos recientes.",
 ];
 
-let infoSobre = [
+let imgRando = [
   {
-    identificador: "cruces",
-    encabezado: "sobre.html",
-    texto:
-      "Laurie Anderson ha sido una pionera en la incorporación de nuevas tecnologías en el arte. Desde instrumentos modificados hasta sistemas digitales, su trabajo investiga cómo la tecnología puede influir en la creación y la percepción artística. Este cruce ha permitido ampliar las posibilidades del arte contemporáneo, integrando herramientas que transforman tanto los procesos como los resultados. Su obra continúa siendo relevante en un contexto donde la tecnología ocupa un lugar central en la cultura.",
+    nombre: "Four Talks - Hirshhorn Museum",
+    imagen: "img/anderson-1.jpg",
   },
   {
-    identificador: "Big Science",
-    encabezado: "1982",
-    texto: "img/anderson2.jpg",
+    nombre: "The Chalkroom - MASS MoCA",
+    imagen: "img/anderson-2.jpg",
+  },
+  {
+    nombre: "Songs and Stories for Moby Dick",
+    imagen: "img/anderson-3.jpg",
+  },
+  {
+    nombre: "Chalkroom & Aloft - MASS MoCA",
+    imagen: "img/anderson-4.jpg",
+  },
+  {
+    nombre: "The Weather - Hirshhorn Museum",
+    imagen: "img/anderson-5.jpg",
+  },
+  {
+    nombre: "Looking into a Mirror Sideways - Moderna Museet",
+    imagen: "img/anderson-6.jpg",
+  },
+  {
+    nombre: "Four Talks - Sculpture Garden",
+    imagen: "img/anderson-7.jpg",
+  },
+  {
+    nombre: "The Waters Reglitterized - Sean Kelly",
+    imagen: "img/anderson-8.jpg",
+  },
+  {
+    nombre: "BOAT - Vito Schnabel",
+    imagen: "img/anderson-9.jpg",
+  },
+  {
+    nombre: "United States Parts 1 to 4 - Moderna Museet",
+    imagen: "img/anderson-10.jpg",
   },
 ];
 
+/* CAPTURO LOS BOTONES Y SU TEXTO CORRESPONDIENTE */
+let btnObras = document.querySelector("#obras");
+let btnCruces = document.querySelector("#cruces");
+let btnLeng = document.querySelector("#lenguaje");
+let btnPerf = document.querySelector("#performance");
 let btnDatos = document.querySelector("#datos-curiosos");
-let datoTexto = document.querySelector("#dato-texto");
 
+let txtObras = document.querySelector("#contenido-obras");
+let txtCruces = document.querySelector("#contenido-cruces");
+let txtLeng = document.querySelector("#contenido-lenguaje");
+let txtPerf = document.querySelector("#contenido-performance");
+let txtDato = document.querySelector("#dato-texto");
+
+let imgSobre = document.querySelector("#img-sobre");
+
+function ocultarTodo() {
+  txtObras.style.display = "none";
+  txtCruces.style.display = "none";
+  txtLeng.style.display = "none";
+  txtPerf.style.display = "none";
+  txtDato.style.display = "none";
+}
+
+function imagenRandom() {
+  const rand = Math.floor(Math.random() * imgRando.length);
+  let imgRand = `<img src="${imgRando[rand].imagen}"alt="${imgRando[rand].nombre} /">`;
+
+  imgSobre.innerHTML = imgRand;
+}
+
+txtObras.style.display = "flex";
+
+btnObras.addEventListener("click", function () {
+  ocultarTodo();
+  txtObras.style.display = "flex";
+  imagenRandom();
+});
+
+btnCruces.addEventListener("click", function () {
+  ocultarTodo();
+  txtCruces.style.display = "flex";
+  imagenRandom();
+});
+
+btnLeng.addEventListener("click", function () {
+  ocultarTodo();
+  txtLeng.style.display = "flex";
+  imagenRandom();
+});
+
+btnPerf.addEventListener("click", function () {
+  ocultarTodo();
+  txtPerf.style.display = "flex";
+  imagenRandom();
+});
+
+/* EVENTO QUE CONTIENE UNA FUNCION QUE SELECCIONA UN ELEMENTO AL AZAR DE datosCuriosos */
 btnDatos.addEventListener("click", function () {
+  ocultarTodo();
+  txtDato.style.display = "flex";
+
   const random = Math.floor(Math.random() * datosCuriosos.length);
   let datoRand = `<p>${datosCuriosos[random]}</p>`;
 
-  datoTexto.innerHTML = datoRand;
+  txtDato.innerHTML = datoRand;
+  imagenRandom();
 });

@@ -11,7 +11,7 @@ body {
   display: flex;
   justify-content: center;
   background-image: url(../img/fondo.png);
-  min-height: 50rem;
+  min-height: 40rem;
 }
 
 .contenedor {
@@ -232,6 +232,7 @@ blockquote {
 /* ========================== SOBRE ANDERSON ========================== */
 
 .anderson-sobre {
+  width: 100%;
   display: inline-flex;
   font-family: "Trebuchet MS", sans-serif;
   line-height: 1.5;
@@ -239,7 +240,6 @@ blockquote {
 
 .botones-sobre {
   border: 2px solid #feffff;
-  background-color: #feffff;
   height: fit-content;
   max-width: 10rem;
   margin: 1rem 0;
@@ -263,12 +263,56 @@ blockquote {
   color: #010412;
 }
 
-#dato-texto p {
-  align-self: center;
-  margin: 1rem;
+.texto-sobre {
+  flex-direction: row;
+  width: 100%;
+}
+
+.texto-sobre ul {
+  display: inline-flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.texto-sobre li {
+  width: 30%;
+  margin: 0.2rem;
   padding: 1rem;
-  border: 1px solid #010412;
+  list-style: none;
+  border: 3px solid #010412;
+  background-color: #010412;
+  color: #feffff;
+  text-align: center;
+  font-size: 30px;
+}
+
+.contenido-sobre {
+  display: none;
+  flex-direction: column;
+}
+
+.contenido-sobre h2 {
+  font-size: 30px;
+}
+
+.contenido-sobre p {
+  margin-left: 1rem;
+  font-size: 20px;
+}
+
+#dato-texto {
+  display: none;
+  align-self: center;
+  justify-content: center;
+}
+
+#dato-texto p {
+  margin-left: 1rem;
+  padding: 1rem;
+  border-radius: 5px;
+  border: 2px solid #010412;
   text-align: center;
   font-family: "Trebuchet MS", sans-serif;
   font-weight: bold;
+  font-size: 30px;
 }
