@@ -9,23 +9,121 @@
       href="https://fonts.googleapis.com/css2?family=Abel&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Press+Start+2P&family=Science+Gothic:wght@100..900&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
     <title>Inicio - Laurie Anderson</title>
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
-    <header>
-      <nav></nav>
-    </header>
-    <main>
-      <!--
-            <section><article></article></section>
-        -->
-    </main>
-    <footer></footer>
-    <!--LAYOUT 3 COLUMNAS
-    Todo el contenido de la página deberá estar dentro en un elemento de bloque que debe tener 
-    definido un ancho máximo. El bloque contenedor deberá estar centrado horizontalmente en la página. 
-    Para centrar el bloque se debe usar flexbox.
-    -->
+    <div class="contenedor">
+      <!--========================== HEADER ==========================-->
+      <header>
+        <h1><a href="index.html">LAURIE ANDERSON</a></h1>
+        <h2 class="sub-head">
+          Performance, tecnología y narración en el arte contemporáneo
+        </h2>
+        <nav>
+          <ul>
+            <li><a href="index.html">INICIO</a></li>
+            <li><a href="sobre.html">SOBRE ANDERSON</a></li>
+            <li><a href="ejercicio.html">EJERCICIO</a></li>
+          </ul>
+        </nav>
+      </header>
+      <!--========================== MAIN ==========================-->
+
+      <main>
+        <section>
+          <blockquote>
+            <em>“El lenguaje es un virus que viene del espacio exterior.”</em> —
+            Laurie Anderson
+          </blockquote>
+
+          <div class="anderson-index">
+            <article>
+              <h2>Una voz singular en el arte contemporáneo</h2>
+              <p>
+                <strong>Laurie Anderson</strong> es una artista
+                multidisciplinaria cuya obra abarca performance, música, cine y
+                arte multimedia. Su práctica se caracteriza por la exploración
+                del lenguaje, la tecnología y la narración como herramientas
+                para construir experiencias artísticas complejas. A lo largo de
+                su carrera, ha desarrollado un estilo propio que combina lo
+                experimental con lo accesible.<br />
+                Su trabajo se distingue por el uso de la voz como elemento
+                central. A través de relatos, textos y composiciones sonoras,
+                crea piezas que invitan a reflexionar sobre la comunicación, la
+                memoria y la percepción. La tecnología aparece como un medio
+                para expandir estas posibilidades expresivas. Además, su enfoque
+                integra elementos visuales, musicales y performáticos, generando
+                obras que no se limitan a un único formato. Esta hibridez la
+                posiciona como una figura clave dentro del arte contemporáneo.
+              </p>
+            </article>
+
+            <article>
+              <h2>Trayectoria y proyección internacional</h2>
+              <p>
+                Nacida en Estados Unidos, Laurie Anderson comenzó su carrera en
+                el circuito del arte experimental y la performance en la década
+                de 1970. Su reconocimiento se amplió cuando logró llevar
+                propuestas conceptuales a públicos más amplios, manteniendo una
+                fuerte identidad artística. Uno de sus trabajos más conocidos es
+                O Superman, una pieza que combina música electrónica y
+                narrativa, y que alcanzó difusión internacional. Este tipo de
+                obras evidencian su capacidad para integrar lo experimental con
+                formatos más populares. A lo largo de su trayectoria, ha
+                presentado sus obras en museos, teatros y festivales de todo el
+                mundo. Su producción ha influido en múltiples disciplinas y
+                continúa siendo una referencia en el cruce entre arte,
+                tecnología y narración.
+              </p>
+            </article>
+
+            <article>
+              <h2>Tecnología, narrativa y experimentación</h2>
+              <p>
+                El trabajo de Laurie Anderson se caracteriza por la integración
+                de tecnologías en sus procesos creativos, no como un fin en sí
+                mismo, sino como una herramienta para expandir el lenguaje
+                artístico. Utiliza dispositivos electrónicos, procesamiento de
+                voz y medios audiovisuales para construir experiencias que
+                combinan relato y experimentación. Sus obras suelen
+                desarrollarse como narraciones fragmentadas, donde la voz guía
+                al espectador a través de historias que mezclan lo personal, lo
+                político y lo ficticio. Este enfoque permite explorar nuevas
+                formas de contar, donde la estructura no es lineal y la
+                interpretación queda abierta.
+              </p>
+            </article>
+          </div>
+
+          <hr />
+
+          <button type="button" id="boton-galeria">VER GALERIA</button>
+        </section>
+
+        <section id="galeria"></section>
+      </main>
+
+      <!--========================== FOOTER ==========================-->
+
+      <footer>
+        <a href="https://github.com/AngelLeonSalvador">
+          <i class="fa-brands fa-square-github"></i>
+          ÁNGEL LEÓN SALVADOR
+        </a>
+        <div class="laurie-mail">
+          <p>
+            <i class="fa-solid fa-at"></i>
+            Para contactarse escribir a
+            <a href="mailto:laurie@artedigital.com">laurie@artedigital.com</a>
+          </p>
+        </div>
+      </footer>
+    </div>
+    <script src="js/script-inicio.js"></script>
   </body>
 </html>

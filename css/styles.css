@@ -1,0 +1,274 @@
+/* ==========================
+    UNIVERSAL // BODY // .CONTENEDOR
+========================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  background-image: url(../img/fondo.png);
+  min-height: 50rem;
+}
+
+.contenedor {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  max-width: 1500px;
+}
+
+/* ========================== HEADER ========================== */
+
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0.7rem;
+  background-color: #feffff;
+  line-height: 1.5;
+}
+
+h1 {
+  font-family: "Abel", sans-serif;
+  font-weight: 900;
+}
+
+h1 a:link {
+  text-decoration: none;
+  color: #010412;
+}
+h1 a:visited {
+  color: #010412;
+}
+h1 a:hover {
+  color: #010412;
+}
+h1 a:active {
+  color: #010412;
+}
+
+.sub-head {
+  margin: 0;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+/* ========================== NAV ========================== */
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav ul li {
+  display: inline-flex;
+  font-family: "Trebuchet MS", sans-serif;
+  font-size: 25px;
+  padding: 0 0.5rem;
+}
+
+nav a:link {
+  text-decoration: none;
+  color: #010412;
+  transition: 400ms color;
+}
+nav a:visited {
+  color: #1b3d51;
+}
+nav a:hover {
+  color: #3e8fad;
+}
+nav a:active {
+  color: #02172b;
+}
+
+/* ========================== MAIN ========================== */
+
+main {
+  flex: 1;
+}
+
+main section {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+  padding: 2rem;
+  font-family: "Trebuchet MS", sans-serif;
+  background-color: #feffff;
+  color: #010412;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+h2 {
+  font-family: "Abel", sans-serif;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-size: 1.4rem;
+  text-indent: 0; /* Necesario para los títulos en index */
+}
+
+hr {
+  margin: 1rem;
+  border: 1px solid #010412;
+}
+
+/* ========================== FOOTER ========================== */
+
+footer {
+  display: flex;
+  align-self: flex-end;
+  justify-content: space-between;
+  padding: 1.5rem;
+  font-family: "Trebuchet MS", sans-serif;
+  font-size: 15px;
+  background-color: #feffff;
+  color: #010412;
+  line-height: 1.5;
+  width: 100%;
+}
+
+footer a:link {
+  text-decoration: none;
+  color: #010412;
+}
+
+footer a:hover {
+  color: #1b3d51;
+}
+
+footer a:visited {
+  color: #3e8fad;
+}
+
+footer a:active {
+  color: #02172b;
+}
+
+footer i {
+  color: #02172b;
+}
+
+/* ========================== INDEX ========================== */
+
+.anderson-index {
+  display: inline-flex;
+  justify-content: space-evenly;
+}
+
+.anderson-index article {
+  margin: 1rem;
+  text-indent: 1rem;
+  width: 35%;
+}
+
+blockquote {
+  align-self: center;
+  background-color: #010412;
+  color: #feffff;
+  border-radius: 10px;
+  width: fit-content;
+  padding: 1rem;
+  font-size: 30px;
+  font-weight: 500;
+  margin: 1rem 0;
+}
+
+#lista-index ul {
+  text-align: center;
+  list-style: none;
+}
+
+#boton-galeria {
+  width: fit-content;
+  align-self: center;
+  background-color: #010412;
+  border: 1px solid #010412;
+  color: #feffff;
+  border-radius: 10px;
+  padding: 1rem;
+  transition: 400ms color;
+  font-weight: bold;
+}
+
+#boton-galeria:hover {
+  background-color: #feffff;
+  color: #010412;
+}
+
+#galeria {
+  display: none;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  background-color: #feffff;
+}
+
+.tarjeta {
+  margin: 0.5rem;
+  width: 350px;
+}
+
+.tarjeta img {
+  width: 100%;
+  border: 1px solid #010412;
+}
+
+.encabezado {
+  display: flex;
+  justify-content: space-between;
+  font-family: "Abel", sans-serif;
+  background-color: #010412;
+  color: #feffff;
+  margin: 0.3rem 0;
+  padding: 1rem;
+  font-weight: bold;
+}
+
+/* ========================== SOBRE ANDERSON ========================== */
+
+.anderson-sobre {
+  display: inline-flex;
+  font-family: "Trebuchet MS", sans-serif;
+  line-height: 1.5;
+}
+
+.botones-sobre {
+  border: 2px solid #feffff;
+  background-color: #feffff;
+  height: fit-content;
+  max-width: 10rem;
+  margin: 1rem 0;
+  margin-left: 1rem;
+}
+
+.botones-sobre button {
+  background-color: #010412;
+  border: 1px solid #feffff;
+  color: #feffff;
+  font-weight: bold;
+  width: 100%;
+  padding: 1rem;
+  text-align: center;
+  transition: 400ms color;
+}
+
+.botones-sobre button:hover {
+  background-color: #feffff;
+  border: 1px solid #010412;
+  color: #010412;
+}
+
+#dato-texto p {
+  align-self: center;
+  margin: 1rem;
+  padding: 1rem;
+  border: 1px solid #010412;
+  text-align: center;
+  font-family: "Trebuchet MS", sans-serif;
+  font-weight: bold;
+}
