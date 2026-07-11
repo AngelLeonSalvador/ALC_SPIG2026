@@ -316,3 +316,36 @@ blockquote {
   font-weight: bold;
   font-size: 30px;
 }
+
+/* ========================== EJERCICIO ========================== */
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+  padding: 1rem;
+  border: 2px solid #010412;
+}
+
+label {
+  font-weight: bold;
+}
+
+input {
+  margin: 0.5rem 0;
+  max-width: 10rem;
+}
+
+.btnform button {
+  display: inline-flex;
+  background-color: #02172b;
+  color: #feffff;
+  border: 1px solid #02172b;
+  margin-right: 0.5rem;
+  padding: 0.5rem;
+  width: fit-content;
+}
+
+.btnform button:disabled {
+  background-color: #4c4e52;
+}

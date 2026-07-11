@@ -1,4 +1,3 @@
-/* CREO UNA LISTA CON TODOS LOS DATOS */
 const datosCuriosos = [
   "Laurie Anderson fue una de las primeras artistas en combinar performance, música experimental y tecnología en la escena del arte contemporáneo.",
   "Su tema O Superman se convirtió en un éxito inesperado en 1981 y llegó al segundo puesto en los rankings del Reino Unido.",
@@ -55,7 +54,6 @@ let imgRando = [
   },
 ];
 
-/* CAPTURO LOS BOTONES Y SU TEXTO CORRESPONDIENTE */
 let btnObras = document.querySelector("#obras");
 let btnCruces = document.querySelector("#cruces");
 let btnLeng = document.querySelector("#lenguaje");
@@ -86,6 +84,7 @@ function imagenRandom() {
 }
 
 txtObras.style.display = "flex";
+imagenRandom();
 
 btnObras.addEventListener("click", function () {
   ocultarTodo();
@@ -111,7 +110,6 @@ btnPerf.addEventListener("click", function () {
   imagenRandom();
 });
 
-/* EVENTO QUE CONTIENE UNA FUNCION QUE SELECCIONA UN ELEMENTO AL AZAR DE datosCuriosos */
 btnDatos.addEventListener("click", function () {
   ocultarTodo();
   txtDato.style.display = "flex";

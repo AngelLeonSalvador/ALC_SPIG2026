@@ -13,7 +13,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     />
-    <title>Inicio - Laurie Anderson</title>
+    <title>Ejercicio - Laurie Anderson</title>
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
@@ -34,7 +34,52 @@
       </header>
       <!--========================== MAIN ==========================-->
 
-      <main></main>
+      <main>
+        <section>
+          <form action="#" method="get" id="form-cantidad">
+            <label for="cantidad">Cantidad de Obras a Exhibir</label>
+            <input type="number" name="cantidad" id="cantidad" required />
+
+            <div class="btnform">
+              <button id="btn-cantidad" type="submit">ENVIAR</button>
+              <button id="rst-cantidad" type="reset">BORRAR</button>
+            </div>
+          </form>
+
+          <form action="#" method="get" id="form-obras">
+            <label for="nombre">Nombre de la Obra</label>
+            <input type="text" name="nombre" id="nombre" required />
+
+            <label for="duracion">Duración de la Obra (En Minutos)</label>
+            <input type="number" name="duracion" id="duracion" required />
+
+            <label for="peso">Peso del Archivo (En MB)</label>
+            <input type="number" name="peso" id="peso" required />
+
+            <label for="tiempo"
+              >Tiempo estimado de transferencia en ms por cada MB</label
+            >
+            <input type="number" name="tiempo" id="tiempo" required />
+
+            <label for="costo"
+              >Costo mensual de almacenamiento por cada MB</label
+            >
+            <input type="number" name="costo" id="costo" required />
+
+            <div class="btnform">
+              <button type="submit" id="btn-agregar" disabled>AGREGAR</button>
+              <button type="reset" id="btn-reset" disabled>BORRAR</button>
+            </div>
+          </form>
+
+          <div class="btnform">
+            <button type="button" id="btn-calcular" disabled>CALCULAR</button>
+            <button type="button" id="btn-reiniciar" disabled>REINICIAR</button>
+          </div>
+
+          <div id="resultado"></div>
+        </section>
+      </main>
 
       <!--========================== FOOTER ==========================-->
 
@@ -52,7 +97,6 @@
         </div>
       </footer>
     </div>
-
-    <!--Se debe contemplar dar al usuario las indicaciones para poder interactuar-->
+    <script src="js/script-ejercicio.js"></script>
   </body>
 </html>
