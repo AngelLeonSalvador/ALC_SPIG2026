@@ -25,11 +25,17 @@ let btnReiniciar = document.querySelector("#btn-reiniciar");
 
 let resultado = document.querySelector("#resultado");
 
-inputNombre.disabled = true;
-inputDuracion.disabled = true;
-inputPeso.disabled = true;
-inputTiempo.disabled = true;
-inputCosto.disabled = true;
+function bloquearFormulario(estado) {
+  inputNombre.disabled = estado;
+  inputDuracion.disabled = estado;
+  inputPeso.disabled = estado;
+  inputTiempo.disabled = estado;
+  inputCosto.disabled = estado;
+  btnAgregar.disabled = estado;
+  btnReset.disabled = estado;
+}
+
+bloquearFormulario(true);
 
 formCantidad.addEventListener("submit", function (e) {
   e.preventDefault();
@@ -41,13 +47,7 @@ formCantidad.addEventListener("submit", function (e) {
     btnCantidad.disabled = true;
     rstCantidad.disabled = true;
 
-    inputNombre.disabled = false;
-    inputDuracion.disabled = false;
-    inputPeso.disabled = false;
-    inputTiempo.disabled = false;
-    inputCosto.disabled = false;
-    btnAgregar.disabled = false;
-    btnReset.disabled = false;
+    bloquearFormulario(false);
   }
 });
 
@@ -64,5 +64,100 @@ formObras.addEventListener("submit", function (e) {
   } else {
     tiempoMB = Number(inputTiempo.value);
     costoMB = Number(inputCosto.value);
+
+    let obra = {
+      nombre: inputNombre.value,
+      duracion: Number(inputDuracion.value),
+      peso: Number(inputPeso.value),
+    };
+
+    obras.push(obra);
+
+    contador++;
+    inputNombre.value = "";
+    inputDuracion.value = "";
+    inputPeso.value = "";
+
+    if (contador == 1) {
+      inputTiempo.disabled = true;
+      inputCosto.disabled = true;
+      btnReset.disabled = false;
+    }
+    if (contador == cantObras) {
+      btnAgregar.disabled = true;
+      btnReset.disabled = true;
+      btnCalcular.disabled = false;
+      inputNombre.disabled = true;
+      inputDuracion.disabled = true;
+      inputPeso.disabled = true;
+    }
   }
+});
+
+btnCalcular.addEventListener("click", function () {
+  let duracionTotal = 0;
+  let duracionProm = 0;
+
+  let mayorDuracion = 0;
+  let mayorNombre = "";
+  let mayorPeso = 0;
+
+  let costoMensual = 0;
+
+  for (let i = 0; i < obras.length; i++) {
+    duracionTotal += obras[i].duracion;
+    costoMensual += obras[i].peso * costoMB;
+
+    if (obras[i].duracion > mayorDuracion) {
+      mayorDuracion = obras[i].duracion;
+      mayorNombre = obras[i].nombre;
+      mayorPeso = obras[i].peso;
+    }
+  }
+
+  duracionProm = duracionTotal / cantObras;
+
+  let tiempoDescarga = mayorPeso * tiempoMB;
+  let costoAnual = costoMensual * 12;
+
+  resultado.style.display = "flex";
+  resultado.innerHTML = `<h2>Resultados</h2>
+<ul>
+<li><strong>Duración total:</strong> ${duracionTotal} minutos.</li>
+<li><strong>Duración promedio:</strong> ${duracionProm} minutos.</li>
+<li><strong>Obra de mayor duración:</strong> ${mayorNombre}.</li>
+<li><strong>Tiempo de descarga:</strong> ${tiempoDescarga} ms.</li>
+<li><strong>Costo anual:</strong> $${costoAnual}.</li>
+</ul>`;
+
+  btnReiniciar.disabled = false;
+  btnCalcular.disabled = true;
+});
+
+btnReiniciar.addEventListener("click", function () {
+  obras = [];
+  cantObras = 0;
+  contador = 0;
+
+  tiempoMB = 0;
+  costoMB = 0;
+
+  inputCantidad.value = "";
+
+  inputNombre.value = "";
+  inputDuracion.value = "";
+  inputPeso.value = "";
+  inputTiempo.value = "";
+  inputCosto.value = "";
+
+  resultado.innerHTML = "";
+
+  inputCantidad.disabled = false;
+  btnCantidad.disabled = false;
+  rstCantidad.disabled = false;
+
+  bloquearFormulario(true);
+
+  btnCalcular.disabled = true;
+  btnReiniciar.disabled = true;
 });
