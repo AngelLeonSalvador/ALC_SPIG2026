@@ -150,8 +150,8 @@ btnReiniciar.addEventListener("click", function () {
   inputTiempo.value = "";
   inputCosto.value = "";
 
-  resultado.style.display = "none";
   resultado.innerHTML = "";
+  resultado.style.display = "none";
 
   inputCantidad.disabled = false;
   btnCantidad.disabled = false;

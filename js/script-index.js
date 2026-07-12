@@ -74,10 +74,10 @@ let cambioGaleria = document.querySelectorAll(".tarjeta");
 
 cambioGaleria.forEach(function (tarjeta) {
   tarjeta.addEventListener("mouseover", function () {
-    this.style.width = "500px";
+    this.style.width = "30rem";
   });
 
   tarjeta.addEventListener("mouseout", function () {
-    this.style.width = "350px";
+    this.style.width = "23rem";
   });
 });
