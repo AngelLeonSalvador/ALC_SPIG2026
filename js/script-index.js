@@ -64,7 +64,7 @@ obras.forEach(function (obra) {
     <p>${obra.nombre}</p> 
     <p>${obra.anio}</p>
     </div>`;
-  tarjeta += `<img src="${obra.imagen}"alt="${obra.nombre}">`;
+  tarjeta += `<img src="${obra.imagen} "alt="${obra.nombre}">`;
   tarjeta += "</div>";
 
   galeria.innerHTML += tarjeta;

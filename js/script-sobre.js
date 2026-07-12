@@ -11,7 +11,7 @@ const datosCuriosos = [
   "Sigue siendo una figura activa e influyente en el arte digital y ha experimentado con inteligencia artificial en proyectos recientes.",
 ];
 
-let imgRando = [
+const imgRando = [
   {
     nombre: "Four Talks - Hirshhorn Museum",
     imagen: "img/anderson-1.jpg",
@@ -78,7 +78,7 @@ function ocultarTodo() {
 
 function imagenRandom() {
   const rand = Math.floor(Math.random() * imgRando.length);
-  let imgRand = `<img src="${imgRando[rand].imagen}"alt="${imgRando[rand].nombre} /">`;
+  let imgRand = `<img src="${imgRando[rand].imagen} "alt="${imgRando[rand].nombre} ">`;
 
   imgSobre.innerHTML = imgRand;
 }

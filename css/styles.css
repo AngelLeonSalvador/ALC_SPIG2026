@@ -52,9 +52,11 @@ h1 a:active {
 }
 
 .sub-head {
+  font-family: "Abel", sans-serif;
+  font-weight: 900;
   margin: 0;
   text-decoration: none;
-  font-size: 15px;
+  font-size: 1rem;
 }
 
 /* ========================== NAV ========================== */
@@ -68,22 +70,26 @@ nav ul {
 nav ul li {
   display: inline-flex;
   font-family: "Trebuchet MS", sans-serif;
-  font-size: 25px;
+  font-size: 1.5rem;
   padding: 0 0.5rem;
 }
 
-nav a:link {
+nav a:link,
+footer a:link {
   text-decoration: none;
   color: #010412;
   transition: 400ms color;
 }
-nav a:visited {
+nav a:visited,
+footer a:hover {
   color: #1b3d51;
 }
-nav a:hover {
+nav a:hover,
+footer a:visited {
   color: #3e8fad;
 }
-nav a:active {
+nav a:active,
+footer a:active {
   color: #02172b;
 }
 
@@ -126,28 +132,11 @@ footer {
   justify-content: space-between;
   padding: 1.5rem;
   font-family: "Trebuchet MS", sans-serif;
-  font-size: 15px;
+  font-size: 1rem;
   background-color: #feffff;
   color: #010412;
   line-height: 1.5;
   width: 100%;
-}
-
-footer a:link {
-  text-decoration: none;
-  color: #010412;
-}
-
-footer a:hover {
-  color: #1b3d51;
-}
-
-footer a:visited {
-  color: #3e8fad;
-}
-
-footer a:active {
-  color: #02172b;
 }
 
 footer i {
@@ -174,7 +163,7 @@ blockquote {
   border-radius: 10px;
   width: fit-content;
   padding: 1rem;
-  font-size: 30px;
+  font-size: 2rem;
   font-weight: 500;
   margin: 1rem 0;
 }
@@ -210,7 +199,7 @@ blockquote {
 
 .tarjeta {
   margin: 0.5rem;
-  width: 350px;
+  width: 23rem;
 }
 
 .tarjeta img {
@@ -283,7 +272,7 @@ blockquote {
   background-color: #010412;
   color: #feffff;
   text-align: center;
-  font-size: 30px;
+  font-size: 2rem;
 }
 
 .contenido-sobre {
@@ -292,12 +281,12 @@ blockquote {
 }
 
 .contenido-sobre h2 {
-  font-size: 30px;
+  font-size: 2rem;
 }
 
 .contenido-sobre p {
   margin-left: 1rem;
-  font-size: 20px;
+  font-size: 1.5rem;
 }
 
 #dato-texto {
@@ -314,10 +303,20 @@ blockquote {
   text-align: center;
   font-family: "Trebuchet MS", sans-serif;
   font-weight: bold;
-  font-size: 30px;
+  font-size: 2rem;
 }
 
 /* ========================== EJERCICIO ========================== */
+
+#img-instrucciones {
+  float: right;
+  margin-left: 3rem;
+  width: 30rem;
+}
+
+.instrucciones ol {
+  margin: 0 1rem;
+}
 
 form {
   display: flex;
@@ -352,7 +351,7 @@ input {
 
 #btn-calcular,
 #btn-reiniciar {
-  font-size: 20px;
+  font-size: 1.5rem;
 }
 
 #resultado {
@@ -360,7 +359,6 @@ input {
   flex-direction: column;
   margin: 1rem;
   padding: 1rem;
-  border: 2px solid #010412;
 }
 
 #resultado ul {
